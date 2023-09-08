@@ -1,0 +1,14 @@
+{
+  "name": "1st_task",
+  "version": "1.0.0",
+  "description": "1st task on hng X",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trilvid",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
