@@ -11,7 +11,17 @@ app.get(`/api?`, (req, res) => {
 
     const randomMinutes = Math.floor(Math.random() * 5) - 2;
 
-    const currentUTCWithinWindow = new Date(date.getTime() + randomMinutes * 60000).toISOString();
+        date.setMinutes(date.getMinutes() + randomMinutes);
+    
+        // Format the date components manually
+        const year = date.getUTCFullYear();
+        const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+        const day = String(date.getUTCDate()).padStart(2, '0');
+        const hours = String(date.getUTCHours()).padStart(2, '0');
+        const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+        const seconds = String(date.getUTCSeconds()).padStart(2, '0');
+    
+        const currentUTCWithinWindow = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
 
 
     const myResponse = {
@@ -23,7 +33,7 @@ app.get(`/api?`, (req, res) => {
         github_repo_url: "https://github.com/Trilvid/hngX-stage-1-task/tree/main",
         status_code: 200
     }
-    
+     
     res.status(200).json(myResponse)
     
 })
