@@ -24,7 +24,7 @@ app.get(`/api/:slack_name/:track`, (req, res) => {
         current_day: daysInAWeek[date.getDay()],
         utc_time: date.toISOString(),
         track: "Backend",
-        github_file_url: "https://github.com/Trilvid/hngX-stage-1-task/main/app.js",
+        github_file_url: "https://github.com/Trilvid/hngX-stage-1-task/blob/main/app.js",
         github_repo_url: "https://github.com/Trilvid/hngX-stage-1-task",
         status_code: 200
     }
