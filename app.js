@@ -25,7 +25,7 @@ app.get(`/api/:slack_name/:track`, (req, res) => {
         utc_time: date.toISOString(),
         track: "Backend",
         github_file_url: "https://github.com/Trilvid/hngX-stage-1-task/blob/main/app.js",
-        github_repo_url: "https://github.com/Trilvid/hngX-stage-1-task",
+        github_repo_url: "https://github.com/Trilvid/hngX-stage-1-task/tree/main",
         status_code: 200
     }
     
