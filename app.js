@@ -4,17 +4,17 @@ const app = express();
 
 
 
-const slack_name = "trilvid";
-const track = "backend"
+// const slack_name = "trilvid";
+// const track = "backend"
 
-app.get(`/api/:slack_name/:track`, (req, res) => {
+app.get(`/api`, (req, res) => {
 
-    const mySlackName = req.params.slack_name
-    const myTrack = req.params.track
+    // const mySlackName = req.params.slack_name
+    // const myTrack = req.params.track
 
-    if(!slack_name.includes(mySlackName) || !track.includes(myTrack)) {
-        res.send("invalid details note the user track is backend")
-    }
+    // if(!slack_name.includes(mySlackName) || !track.includes(myTrack)) {
+    //     res.send("invalid details note the user track is backend")
+    // }
 
     const date = new Date()
     const daysInAWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
