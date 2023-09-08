@@ -30,6 +30,7 @@ app.get(`/api/:slack_name/:track`, (req, res) => {
     }
     
     res.status(200).json(myResponse)
+    
 })
 
 app.listen(port, () => {
